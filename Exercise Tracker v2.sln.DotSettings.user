@@ -18,14 +18,23 @@
     &lt;TestId&gt;xUnit::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests.Add_ValidExercise_ShouldAddToRepository&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=625b6c35_002D65b4_002D4d84_002Dade0_002D7d82996fdab6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="UpdateExercise_NonExistingExercise_ShouldReturnNotFound #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;ProjectFile&gt;2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF/d:Tests/f:ExerciseControllerUnitTests.cs&lt;/ProjectFile&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6853d447_002D981a_002D4d15_002D9a09_002D62183df2a8fc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ExerciseRepositoryTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;ProjectFile&gt;2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF/f:ExerciseRepositoryTests.cs&lt;/ProjectFile&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea476b44_002D5450_002D40a1_002D87cf_002D6ccc05bf2812/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Add_ValidExercise_ShouldAddToRepository #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c1ba82a5_002D4994_002D4668_002D8a01_002D6acae283558a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateExercise_NonExistingExercise_ShouldReturnNotFound" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::Exercise_Tracker.Tests.Controllers.ExerciseControllerTests.UpdateExercise_NonExistingExercise_ShouldReturnNotFound&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea476b44_002D5450_002D40a1_002D87cf_002D6ccc05bf2812/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Add_ValidExercise_ShouldAddToRepository #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseServiceTests.AddExercise_ValidExercise_ShouldCallRepositoryAdd&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::Exercise_Tracker.Tests.Controllers.ExerciseControllerTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f9104c09_002D0a06_002D4f72_002Da2a6_002D6e5af2f78fd2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Add_ValidExercise_ShouldAddToRepository #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

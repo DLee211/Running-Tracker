@@ -19,20 +19,22 @@ public class ExerciseService
         _exerciseRepository.Add(exercise);
     }
     
-    public void UpdateExercise(Exercise exercise)
+    public void  UpdateExercise(int id, Exercise updatedExercise)
     {
-        if (exercise == null)
-            throw new ArgumentNullException(nameof(exercise));
+        var existingExercise = _exerciseRepository.GetById(id);
 
-        _exerciseRepository.Add(exercise);
+        // Update the existing exercise with the new values
+        existingExercise.DateStart = updatedExercise.DateStart;
+        existingExercise.DateEnd = updatedExercise.DateEnd;
+        existingExercise.Duration = updatedExercise.Duration;
+        existingExercise.Comments = updatedExercise.Comments;
+
+        _exerciseRepository.Add(existingExercise);
     }
     
     public void DeleteExercise(int id)
     {
         var exerciseToDelete = _exerciseRepository.GetById(id);
-
-        if (exerciseToDelete == null)
-            throw new ArgumentException($"Exercise with ID {id} not found.");
 
         _exerciseRepository.Delete(exerciseToDelete);
     }
@@ -40,10 +42,6 @@ public class ExerciseService
     public Exercise GetExerciseById(int id)
     {
         var exercise = _exerciseRepository.GetById(id);
-
-        if (exercise == null)
-            throw new ArgumentException($"Exercise with ID {id} not found.");
-
         return exercise;
     }
 

@@ -90,6 +90,4 @@ public class ExerciseServiceTests
         // Assert
         Assert.That(result, Is.EqualTo(expectedExercises));
     }
-
-    
 }

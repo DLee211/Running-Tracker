@@ -1,5 +1,6 @@
 ﻿using Exercise_Tracker;
 using Exercise_Tracker_v2.Models;
+using Exercise_Tracker.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exercise_Tracker_v2.Controllers;
@@ -7,43 +8,44 @@ namespace Exercise_Tracker_v2.Controllers;
 [Route("api/[controller]")]
 public class ExerciseController : ControllerBase
 {
-    private readonly IExerciseRepository<Exercise> _exerciseRepository;
+    private readonly ExerciseService _exerciseService;
 
-    public ExerciseController(IExerciseRepository<Exercise> exerciseRepository)
+    public ExerciseController(ExerciseService exerciseService)
     {
-        _exerciseRepository = exerciseRepository;
+        _exerciseService = exerciseService;
     }
 
     [HttpPost]
     [Route("AddExercise")]
     public IActionResult AddExercise(Exercise exercise)
     {
-        _exerciseRepository.Add(exercise);
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        
+        _exerciseService.AddExercise(exercise);
         return Ok();
     }
-    
+
     [HttpPut]
     [Route("UpdateExercise/{id}")]
     public IActionResult UpdateExercise(int id, Exercise updatedExercise)
-    {
-        var existingExercise = _exerciseRepository.GetById(id);
+    {  
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
         
-        existingExercise.DateStart = updatedExercise.DateStart;
-        existingExercise.DateEnd = updatedExercise.DateEnd;
-        existingExercise.Duration = updatedExercise.Duration;
-        existingExercise.Comments = updatedExercise.Comments;
-
-        _exerciseRepository.Add(existingExercise);
+        _exerciseService.UpdateExercise(id, updatedExercise);
         return Ok();
     }
-    
+
     [HttpDelete]
     [Route("DeleteExercise/{id}")]
     public IActionResult DeleteExercise(int id)
     {
-        var existingExercise = _exerciseRepository.GetById(id);
-
-        _exerciseRepository.Delete(existingExercise);
+        _exerciseService.DeleteExercise(id);
         return Ok();
     }
 }
