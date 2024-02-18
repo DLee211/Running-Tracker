@@ -4,13 +4,18 @@ namespace Exercise_Tracker;
 
 public class ExerciseRepository<T> : IExerciseRepository<T> where T : class
 {
-    private readonly DbContext _context;
+    private readonly ExerciseDbContext _context;
     private readonly DbSet<T> _dbSet;
 
-    public ExerciseRepository(DbContext context)
+    public ExerciseRepository(ExerciseDbContext context)
     {
-        _context = context;
-        _dbSet = _context.Set<T>();
+        _context = context ?? throw new ArgumentNullException(nameof(context));
+        _dbSet = context.Set<T>();
+    }
+
+    public ExerciseDbContext GetContext()
+    {
+        return _context;
     }
     
     public T GetById(int id)
@@ -26,15 +31,12 @@ public class ExerciseRepository<T> : IExerciseRepository<T> where T : class
     public void Add(T entity)
     {
         _dbSet.Add(entity);
-    }
-
-    public void Update(T entity)
-    {
-        _context.Entry(entity).State = EntityState.Modified;
+        _context.SaveChanges();
     }
 
     public void Delete(T entity)
     {
         _dbSet.Remove(entity);
+        _context.SaveChanges();
     }
 }
