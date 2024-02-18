@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise Tracker v2", "Exercise Tracker v2\Exercise Tracker v2.csproj", "{D97BEB4C-A5C6-4EA1-9E9C-B0270C3418E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise Tracker Unit Tests", "Exercise Tracker Unit Tests\Exercise Tracker Unit Tests.csproj", "{2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{D97BEB4C-A5C6-4EA1-9E9C-B0270C3418E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D97BEB4C-A5C6-4EA1-9E9C-B0270C3418E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D97BEB4C-A5C6-4EA1-9E9C-B0270C3418E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
