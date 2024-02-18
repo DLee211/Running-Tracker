@@ -7,11 +7,16 @@ using Assert = NUnit.Framework.Assert;
 [TestFixture]
 public class ExerciseRepositoryTests
 {
+    
     [Test]
     public void Constructor_WithValidContext_InitializesContextField()
     {
+        var options = new DbContextOptionsBuilder<ExerciseDbContext>()
+            .UseInMemoryDatabase(databaseName: "TestDatabase")
+            .Options;
+        
         // Arrange
-        var mockContext = Substitute.For<ExerciseDbContext>();
+        var mockContext = Substitute.For<ExerciseDbContext>(options);
 
         // Act
         var repository = new ExerciseRepository<Exercise>(mockContext);
@@ -43,8 +48,12 @@ public class ExerciseRepositoryTests
         ((IQueryable<Exercise>)mockDbSet).GetEnumerator().Returns(testData.AsQueryable().GetEnumerator());
         mockDbSet.Find(Arg.Any<object[]>())
             .Returns(callInfo => testData.FirstOrDefault(e => e.Id == (int)callInfo.Arg<object[]>()[0]));
+        
+        var options = new DbContextOptionsBuilder<ExerciseDbContext>()
+            .UseInMemoryDatabase(databaseName: "TestDatabase")
+            .Options;
 
-        var mockContext = Substitute.For<ExerciseDbContext>();
+        var mockContext = Substitute.For<ExerciseDbContext>(options);
         mockContext.Set<Exercise>().Returns(mockDbSet);
 
         var repository = new ExerciseRepository<Exercise>(mockContext);
@@ -91,7 +100,10 @@ public class ExerciseRepositoryTests
         ((IQueryable<Exercise>)mockDbSet).ElementType.Returns(testData.AsQueryable().ElementType);
         ((IQueryable<Exercise>)mockDbSet).GetEnumerator().Returns(testData.AsQueryable().GetEnumerator());
 
-        var mockContext = Substitute.For<ExerciseDbContext>();
+        var options = new DbContextOptionsBuilder<ExerciseDbContext>()
+            .UseInMemoryDatabase(databaseName: "TestDatabase")
+            .Options;
+        var mockContext = Substitute.For<ExerciseDbContext>(options);
         mockContext.Set<Exercise>().Returns(mockDbSet);
 
         var repository = new ExerciseRepository<Exercise>(mockContext);
@@ -135,8 +147,12 @@ public class ExerciseRepositoryTests
         var exerciseToAdd = new Exercise { Id = 1, DateStart = "2024-02-17", DateEnd = "2024-02-18", Duration = "1:00:00", Comments = "Test 1" };
 
         var mockDbSet = Substitute.For<DbSet<Exercise>>();
+        
+        var options = new DbContextOptionsBuilder<ExerciseDbContext>()
+            .UseInMemoryDatabase(databaseName: "TestDatabase")
+            .Options;
 
-        var mockContext = Substitute.For<ExerciseDbContext>();
+        var mockContext = Substitute.For<ExerciseDbContext>(options);
         mockContext.Set<Exercise>().Returns(mockDbSet); // Mock DbSet
 
         var repository = new ExerciseRepository<Exercise>(mockContext);
@@ -156,8 +172,12 @@ public class ExerciseRepositoryTests
         var exerciseToDelete = new Exercise { Id = 1, DateStart = "2024-02-17", DateEnd = "2024-02-18", Duration = "1:00:00", Comments = "Test 1" };
 
         var mockDbSet = Substitute.For<DbSet<Exercise>>();
+        
+        var options = new DbContextOptionsBuilder<ExerciseDbContext>()
+            .UseInMemoryDatabase(databaseName: "TestDatabase")
+            .Options;
 
-        var mockContext = Substitute.For<ExerciseDbContext>();
+        var mockContext = Substitute.For<ExerciseDbContext>(options);
         mockContext.Set<Exercise>().Returns(mockDbSet); // Mock DbSet
 
         var repository = new ExerciseRepository<Exercise>(mockContext);

@@ -8,8 +8,8 @@ public class ExerciseDbContext : DbContext
 
     private readonly IConfiguration _configuration;
 
-    public ExerciseDbContext()
-        : base()
+    public ExerciseDbContext(DbContextOptions<ExerciseDbContext> options)
+        : base(options)
     {
     }
 
