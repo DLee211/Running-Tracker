@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Exercise_Tracker_v2.Models.Exercise>
+
+@{
+    ViewData["Title"] = "Exercise List";
+}
+
+<h1>Exercise List</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Exercise ID</th>
+        <th>Date Start</th>
+        <th>Date End</th>
+        <th>Duration</th>
+        <th>Comments</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var exercise in Model)
+    {
+        <tr>
+            <td>@exercise.Id</td>
+            <td>@exercise.DateStart</td>
+            <td>@exercise.DateEnd</td>
+            <td>@exercise.Duration</td>
+            <td>@exercise.Comments</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<div>
+</div>
