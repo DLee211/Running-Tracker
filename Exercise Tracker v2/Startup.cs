@@ -15,6 +15,18 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+        // Add framework services.
+        services.AddControllers();
+
+        // Bind the configuration from appsettings.json
+        IConfiguration configuration = new ConfigurationBuilder()
+            .SetBasePath(AppContext.BaseDirectory)
+            .AddJsonFile("appsettings.json")
+            .Build();
+
+        // Register the IConfiguration instance which AppSettings binds against.
+        services.AddSingleton(configuration);
+        
         // Add DbContext
         services.AddDbContext<ExerciseDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -27,7 +39,7 @@ public class Startup
         services.AddControllersWithViews();
     }
     
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ExerciseDbContext dbContext)
     {
         if (env.IsDevelopment())
         {
@@ -40,7 +52,7 @@ public class Startup
             app.UseExceptionHandler("/Home/Error");
             app.UseHsts();
         }
-
+        
         // Common middleware for all environments
         app.UseHttpsRedirection();
         app.UseStaticFiles();
