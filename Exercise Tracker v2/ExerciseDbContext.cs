@@ -7,12 +7,12 @@ public class ExerciseDbContext : DbContext
 {
 
     private readonly IConfiguration _configuration;
-    
+
     public ExerciseDbContext()
         : base()
     {
     }
-    
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
 
