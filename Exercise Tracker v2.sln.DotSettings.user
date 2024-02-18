@@ -2,39 +2,39 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Users\dnll4\.nuget\packages\nsubstitute\5.1.0\lib\net6.0\NSubstitute.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=08b8ffaf_002D17ac_002D452a_002Dabd4_002Ddcb125afaf97/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Update_ExistingExercise_ShouldUpdateRepository" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests.Update_WhenEntityIsNotNull_ShouldUpdateEntityState&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=08b8ffaf_002D17ac_002D452a_002Dabd4_002Ddcb125afaf97/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Update_ExistingExercise_ShouldUpdateRepository" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests.Update_WhenEntityIsNotNull_ShouldUpdateEntityState&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=363e1110_002D74a0_002D4a78_002D9e63_002Dded70974a682/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Add_ValidExercise_ShouldAddToRepository" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests.Add_ValidExercise_ShouldAddToRepository&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=363e1110_002D74a0_002D4a78_002D9e63_002Dded70974a682/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Add_ValidExercise_ShouldAddToRepository" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests.Add_ValidExercise_ShouldAddToRepository&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3ec72e05_002D7448_002D400a_002Dab7f_002D440f8097cf4c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetAll_ShouldReturnAllEntities" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests.GetAll_ShouldReturnAllEntities&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests.Add_ValidExercise_ShouldAddToRepository&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3ec72e05_002D7448_002D400a_002Dab7f_002D440f8097cf4c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetAll_ShouldReturnAllEntities" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests.GetAll_ShouldReturnAllEntities&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests.Add_ValidExercise_ShouldAddToRepository&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=625b6c35_002D65b4_002D4d84_002Dade0_002D7d82996fdab6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateExercise_NonExistingExercise_ShouldReturnNotFound #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;ProjectFile&gt;2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF/d:Tests/f:ExerciseControllerUnitTests.cs&lt;/ProjectFile&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=625b6c35_002D65b4_002D4d84_002Dade0_002D7d82996fdab6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateExercise_NonExistingExercise_ShouldReturnNotFound #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;ProjectFile&gt;2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF/d:Tests/f:ExerciseControllerUnitTests.cs&lt;/ProjectFile&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6853d447_002D981a_002D4d15_002D9a09_002D62183df2a8fc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ExerciseRepositoryTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;ProjectFile&gt;2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF/f:ExerciseRepositoryTests.cs&lt;/ProjectFile&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6853d447_002D981a_002D4d15_002D9a09_002D62183df2a8fc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ExerciseRepositoryTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;ProjectFile&gt;2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF/f:ExerciseRepositoryTests.cs&lt;/ProjectFile&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c1ba82a5_002D4994_002D4668_002D8a01_002D6acae283558a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateExercise_NonExistingExercise_ShouldReturnNotFound" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::Exercise_Tracker.Tests.Controllers.ExerciseControllerTests.UpdateExercise_NonExistingExercise_ShouldReturnNotFound&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c1ba82a5_002D4994_002D4668_002D8a01_002D6acae283558a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateExercise_NonExistingExercise_ShouldReturnNotFound" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::Exercise_Tracker.Tests.Controllers.ExerciseControllerTests.UpdateExercise_NonExistingExercise_ShouldReturnNotFound&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea476b44_002D5450_002D40a1_002D87cf_002D6ccc05bf2812/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Add_ValidExercise_ShouldAddToRepository #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseServiceTests.AddExercise_ValidExercise_ShouldCallRepositoryAdd&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseServiceTests&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::Exercise_Tracker.Tests.Controllers.ExerciseControllerTests&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea476b44_002D5450_002D40a1_002D87cf_002D6ccc05bf2812/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Add_ValidExercise_ShouldAddToRepository #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseRepositoryTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseServiceTests.AddExercise_ValidExercise_ShouldCallRepositoryAdd&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::ExerciseServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2EA4C26D-4CA6-4A5F-8334-3E51BA3513CF::net8.0::Exercise_Tracker.Tests.Controllers.ExerciseControllerTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

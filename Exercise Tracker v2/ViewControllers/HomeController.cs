@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using Exercise_Tracker_v2.Models;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Exercise_Tracker_v2.Controllers;
+namespace Exercise_Tracker_v2.ViewControllers;
 
 public class HomeController : Controller
 {
