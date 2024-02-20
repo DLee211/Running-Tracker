@@ -10,4 +10,9 @@ public class ExerciseController(ExerciseService exerciseService) : Controller
         var exercises = exerciseService.GetAllExercises(); // Retrieve the list of exercises from the repository
         return View(exercises); // Return the view with the list of exercises
     }
+
+    public IActionResult Create()
+    {
+        return View();
+    }
 }
