@@ -9,30 +9,59 @@
 
 <hr />
 
-<form method="post">
+<form id="createExerciseForm">
     <div class="form-group">
-        <label asp-for="DateStart" class="control-label"></label>
-        <input asp-for="DateStart" class="form-control" />
-        <span asp-validation-for="DateStart" class="text-danger"></span>
+        <label>Date Start</label>
+        <input type="text" id="dateStart" class="form-control" />
+        <span class="text-danger" id="dateStartError"></span>
     </div>
-
+    
     <div class="form-group">
-        <label asp-for="DateEnd" class="control-label"></label>
-        <input asp-for="DateEnd" class="form-control" />
-        <span asp-validation-for="DateEnd" class="text-danger"></span>
+        <label>Date End</label>
+        <input type="text" id="dateEnd" class="form-control" />
+        <span class="text-danger" id="dateEndError"></span>
     </div>
-
+    
     <div class="form-group">
-        <label asp-for="Duration" class="control-label"></label>
-        <input asp-for="Duration" class="form-control" />
-        <span asp-validation-for="Duration" class="text-danger"></span>
+        <label>Duration</label>
+        <input type="text" id="duration" class="form-control" />
+        <span class="text-danger" id="durationError"></span>
     </div>
-
+    
     <div class="form-group">
-        <label asp-for="Comments" class="control-label"></label>
-        <input asp-for="Comments" class="form-control" />
-        <span asp-validation-for="Comments" class="text-danger"></span>
+        <label>Comments</label>
+        <textarea id="comments" class="form-control"></textarea>
+        <span class="text-danger" id="commentsError"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Create</button>
 </form>
+
+@section scripts {
+    <script>
+        $(function () {
+            $('#createExerciseForm').submit(function (e) {
+                e.preventDefault();
+                var data = {
+                    DateStart: $('#dateStart').val(),
+                    // Add other exercise properties here
+                };
+                $.ajax({
+                    url: '/Exercise/AddExercise',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function () {
+                        alert('Exercise created successfully.');
+                        // Redirect to a different page if needed
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        // Handle errors
+                        console.error('Error:', errorThrown);
+                        $('#dateStartError').text(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+}
