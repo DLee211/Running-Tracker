@@ -13,6 +13,7 @@ public class ExerciseController(ExerciseService exerciseService) : Controller
 
     public IActionResult Create()
     {
+        ViewData["Title"] = "Create";
         return View();
     }
 }

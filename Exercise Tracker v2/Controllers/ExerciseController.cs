@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Exercise_Tracker_v2.Controllers;
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/")]
 public class ExerciseController : ControllerBase
 {
     private readonly ExerciseService _exerciseService;
@@ -16,7 +16,7 @@ public class ExerciseController : ControllerBase
     }
 
     [HttpPost]
-    [Route("AddExercise")]
+    [Route("Create")]
     public IActionResult AddExercise(Exercise exercise)
     {
         if (!ModelState.IsValid)

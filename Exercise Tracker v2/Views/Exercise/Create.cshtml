@@ -1,10 +1,6 @@
 ﻿@page
 @model Exercise_Tracker_v2.Models.Exercise
 
-@{
-    ViewData["Title"] = "Create";
-}
-
 <h1>Create a New Exercise</h1>
 
 <hr />
@@ -44,10 +40,12 @@
                 e.preventDefault();
                 var data = {
                     DateStart: $('#dateStart').val(),
-                    // Add other exercise properties here
+                    DateEnd: $('#dateEnd').val(),
+                    Duration: $('#duration').val(),
+                    Comments: $('#comments').val(),
                 };
                 $.ajax({
-                    url: '/Exercise/AddExercise',
+                    url: '/Exercise/Create',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify(data),
