@@ -7,16 +7,16 @@ namespace Exercise_Tracker_v2.Controllers;
 [Route("Exercise")]
 public class ExerciseController(ExerciseService exerciseService) : Controller
 {
-    [HttpGet] // HTTP GET method
-    [Route("Index")] // Route for the Index action
+    [HttpGet]
+    [Route("Index")]
     public IActionResult Index()
     {
-        var exercises = exerciseService.GetAllExercises(); // Retrieve the list of exercises from the repository
-        return View(exercises); // Return the view with the list of exercises
+        var exercises = exerciseService.GetAllExercises();
+        return View(exercises);
     }
 
-    [HttpGet] // HTTP GET method
-    [Route("Create")] // Route for the Create action
+    [HttpGet]
+    [Route("Create")]
     public IActionResult Create()
     {
         ViewData["Title"] = "Create";

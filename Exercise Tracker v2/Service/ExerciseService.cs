@@ -22,8 +22,7 @@ public class ExerciseService
     public void  UpdateExercise(int id, Exercise updatedExercise)
     {
         var existingExercise = _exerciseRepository.GetById(id);
-
-        // Update the existing exercise with the new values
+        
         existingExercise.DateStart = updatedExercise.DateStart;
         existingExercise.DateEnd = updatedExercise.DateEnd;
         existingExercise.Duration = updatedExercise.Duration;
