@@ -1,31 +1,41 @@
-﻿using Exercise_Tracker;
-using Exercise_Tracker_v2.Models;
+﻿using Exercise_Tracker_v2.Models;
 using Exercise_Tracker.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exercise_Tracker_v2.Controllers;
 [ApiController]
-[Route("api/[controller]")]
-public class ExerciseController : ControllerBase
+[Route("Exercise")]
+public class ExerciseController(ExerciseService exerciseService) : Controller
 {
-    private readonly ExerciseService _exerciseService;
-
-    public ExerciseController(ExerciseService exerciseService)
+    [HttpGet] // HTTP GET method
+    [Route("Index")] // Route for the Index action
+    public IActionResult Index()
     {
-        _exerciseService = exerciseService;
+        var exercises = exerciseService.GetAllExercises(); // Retrieve the list of exercises from the repository
+        return View(exercises); // Return the view with the list of exercises
     }
+
+    [HttpGet] // HTTP GET method
+    [Route("Create")] // Route for the Create action
+    public IActionResult Create()
+    {
+        ViewData["Title"] = "Create";
+        var exercise = new Exercise();
+        return View(exercise);
+    }
+    
 
     [HttpPost]
     [Route("AddExercise")]
-    public IActionResult AddExercise(Exercise exercise)
+    public IActionResult AddExercise([FromForm]Exercise model)
     {
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
         {
-            return BadRequest(ModelState);
+            exerciseService.AddExercise(model);
+            return RedirectToAction("Index");
         }
-        
-        _exerciseService.AddExercise(exercise);
-        return Ok();
+
+        return View("Create", model);
     }
 
     [HttpPut]
@@ -37,7 +47,7 @@ public class ExerciseController : ControllerBase
             return BadRequest(ModelState);
         }
         
-        _exerciseService.UpdateExercise(id, updatedExercise);
+        exerciseService.UpdateExercise(id, updatedExercise);
         return Ok();
     }
 
@@ -45,7 +55,7 @@ public class ExerciseController : ControllerBase
     [Route("DeleteExercise/{id}")]
     public IActionResult DeleteExercise(int id)
     {
-        _exerciseService.DeleteExercise(id);
+        exerciseService.DeleteExercise(id);
         return Ok();
     }
 }
