@@ -1,65 +1,25 @@
-﻿@page
-@model Exercise_Tracker_v2.Models.Exercise
+﻿@model Exercise_Tracker_v2.Models.Exercise
 
 <h1>Create a New Exercise</h1>
 
 <hr />
 
-<form id="createExerciseForm">
-    <div class="form-group">
-        <label>Date Start</label>
-        <input type="text" id="dateStart" class="form-control" />
-        <span class="text-danger" id="dateStartError"></span>
+<form method="post" action="/Exercise/AddExercise">
+    <div>
+        <label for="dateStart">Start Date</label>
+        <input id="dateStart" name="DateStart" type="text" value="@Model.DateStart" />
     </div>
-    
-    <div class="form-group">
-        <label>Date End</label>
-        <input type="text" id="dateEnd" class="form-control" />
-        <span class="text-danger" id="dateEndError"></span>
+    <div>
+        <label for="dateEnd">End Date</label>
+        <input id="dateEnd" name="DateEnd" type="text" value="@Model.DateEnd" />
     </div>
-    
-    <div class="form-group">
-        <label>Duration</label>
-        <input type="text" id="duration" class="form-control" />
-        <span class="text-danger" id="durationError"></span>
+    <div>
+        <label for="duration">Duration</label>
+        <input id="duration" name="Duration" type="text" value="@Model.Duration" />
     </div>
-    
-    <div class="form-group">
-        <label>Comments</label>
-        <textarea id="comments" class="form-control"></textarea>
-        <span class="text-danger" id="commentsError"></span>
+    <div>
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="Comments">@Model.Comments</textarea>
     </div>
-
-    <button type="submit" class="btn btn-primary">Create</button>
+    <input type="submit" value="Create" />
 </form>
-
-@section scripts {
-    <script>
-        $(function () {
-            $('#createExerciseForm').submit(function (e) {
-                e.preventDefault();
-                var data = {
-                    DateStart: $('#dateStart').val(),
-                    DateEnd: $('#dateEnd').val(),
-                    Duration: $('#duration').val(),
-                    Comments: $('#comments').val(),
-                };
-                $.ajax({
-                    url: '/Exercise/Create',
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify(data),
-                    success: function () {
-                        alert('Exercise created successfully.');
-                        // Redirect to a different page if needed
-                    },
-                    error: function (xhr, textStatus, errorThrown) {
-                        // Handle errors
-                        console.error('Error:', errorThrown);
-                        $('#dateStartError').text(xhr.responseText);
-                    }
-                });
-            });
-        });
-    </script>
-}
