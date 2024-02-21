@@ -17,8 +17,7 @@ public class ExerciseDbContext : DbContext
     {
 
         string connectionString = _configuration.GetConnectionString("ExerciseDbConnection");
-
-        // Use the retrieved connection string with SQL Server
+        
         optionsBuilder.UseSqlServer(connectionString);
     }
     
