@@ -21,6 +21,11 @@
             <td>@exercise.DateEnd</td>
             <td>@exercise.Duration</td>
             <td>@exercise.Comments</td>
+            <td>
+                <form asp-action="DeleteExercise" asp-route-id="@exercise.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this exercise?');">>
+                    <input type="submit" value="Delete"/>
+                </form>
+            </td>
         </tr>
     }
     </tbody>
