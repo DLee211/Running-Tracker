@@ -51,11 +51,11 @@ public class ExerciseController(ExerciseService exerciseService) : Controller
         return Ok();
     }
 
-    [HttpDelete]
+    [HttpPost]
     [Route("DeleteExercise/{id}")]
     public IActionResult DeleteExercise(int id)
     {
         exerciseService.DeleteExercise(id);
-        return Ok();
+        return RedirectToAction("Index");
     }
 }
