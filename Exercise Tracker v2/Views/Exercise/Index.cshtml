@@ -1,7 +1,5 @@
 ﻿@model IEnumerable<Exercise_Tracker_v2.Models.Exercise>
-
 <h1>Exercise List</h1>
-
 <table class="table">
     <thead>
     <tr>
@@ -15,14 +13,17 @@
     <tbody>
     @foreach (var exercise in Model)
     {
-        <tr>
+        <tr class="exercise-row">
             <td>@exercise.Id</td>
             <td>@exercise.DateStart</td>
             <td>@exercise.DateEnd</td>
             <td>@exercise.Duration</td>
             <td>@exercise.Comments</td>
             <td>
-                <form asp-action="DeleteExercise" asp-route-id="@exercise.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this exercise?');">>
+                <a asp-action="UpdateExercise" asp-route-id="@exercise.Id" class="btn btn-default">Edit</a>
+            </td>
+            <td>
+                <form asp-action="DeleteExercise" asp-route-id="@exercise.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this exercise?');">
                     <input type="submit" value="Delete"/>
                 </form>
             </td>
@@ -30,6 +31,5 @@
     }
     </tbody>
 </table>
-
 <div>
 </div>

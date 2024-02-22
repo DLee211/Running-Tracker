@@ -38,7 +38,7 @@ public class ExerciseController(ExerciseService exerciseService) : Controller
         return View("Create", model);
     }
 
-    [HttpPut]
+    [HttpPost]
     [Route("UpdateExercise/{id}")]
     public IActionResult UpdateExercise(int id, Exercise updatedExercise)
     {  
@@ -48,7 +48,7 @@ public class ExerciseController(ExerciseService exerciseService) : Controller
         }
         
         exerciseService.UpdateExercise(id, updatedExercise);
-        return Ok();
+        return RedirectToAction("Index");
     }
 
     [HttpPost]
