@@ -34,15 +34,20 @@ public class ExerciseController(ExerciseService exerciseService) : Controller
     
     [HttpPost]
     [Route("AddExercise")]
-    public IActionResult AddExercise([FromForm]Exercise model)
+    public IActionResult AddExercise([FromForm]Exercise exercise)
     {
+        if (exercise.DateEnd < exercise.DateStart)
+            throw new InvalidOperationException("DateEnd cannot be before DateStart.");
+        if (exercise.Duration < 0 || exercise.Duration > 24)
+            throw new InvalidOperationException("Duration cannot be less than 0 or greater than 24.");
+        
         if (ModelState.IsValid)
         {
-            exerciseService.AddExercise(model);
+            exerciseService.AddExercise(exercise);
             return RedirectToAction("Index");
         }
 
-        return View("Create", model);
+        return View("Create", exercise);
     }
 
     
@@ -50,6 +55,11 @@ public class ExerciseController(ExerciseService exerciseService) : Controller
     [Route("UpdateExercise")]
     public IActionResult UpdateExercise([FromForm]Exercise exercise)
     {  
+        if (exercise.DateEnd < exercise.DateStart)
+            throw new InvalidOperationException("DateEnd cannot be before DateStart.");
+        if (exercise.Duration < 0 || exercise.Duration > 24)
+            throw new InvalidOperationException("Duration cannot be less than 0 or greater than 24.");
+        
         if (ModelState.IsValid)
         {
             exerciseService.UpdateExercise(exercise.Id, exercise);

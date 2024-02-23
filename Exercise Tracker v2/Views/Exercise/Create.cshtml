@@ -2,24 +2,31 @@
 
 <h1>Create a New Exercise</h1>
 
-<hr />
+<hr/>
 
 <form method="post" action="/Exercise/AddExercise">
-    <div>
-        <label for="dateStart">Start Date</label>
-        <input id="dateStart" name="DateStart" type="text" value="@Model.DateStart" />
+    <div class="form-group">
+        <label for="DateStart">Start Date:</label>
+        <input type="date" id="DateStart" name="DateStart" class="form-control" asp-format="{0:yyyy-MM-dd}"/>
     </div>
-    <div>
-        <label for="dateEnd">End Date</label>
-        <input id="dateEnd" name="DateEnd" type="text" value="@Model.DateEnd" />
+    <div class="form-group">
+        <label for="DateEnd">End Date:</label>
+        <input type="date" id="DateEnd" name="DateEnd" class="form-control" asp-format="{0:yyyy-MM-dd}"/>
     </div>
-    <div>
-        <label for="duration">Duration</label>
-        <input id="duration" name="Duration" type="text" value="@Model.Duration" />
+
+    <div class="spacer">
+        <label for="duration">Duration (hours)</label>
+        <input id="duration" name="Duration" type="number" min="0" max="24" value="@Model.Duration"/>
     </div>
-    <div>
+    <div class="spacer">
         <label for="comments">Comments</label>
         <textarea id="comments" name="Comments">@Model.Comments</textarea>
     </div>
-    <input type="submit" value="Create" />
+    <input type="submit" value="Create"/>
 </form>
+
+<style>
+    .spacer {
+        margin-bottom: 50px;
+    }
+</style>

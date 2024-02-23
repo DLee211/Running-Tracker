@@ -4,11 +4,11 @@ public class Exercise
 {
     public int Id { get; set; }
     
-    public string DateStart { get; set; }
+    public DateTime DateStart { get; set; }
     
-    public string DateEnd { get; set; }
+    public DateTime DateEnd { get; set; }
     
-    public string Duration { get; set; }
+    public int Duration { get; set; }
     
     public string Comments { get; set; }
 }

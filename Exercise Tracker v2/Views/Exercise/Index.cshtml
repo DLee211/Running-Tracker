@@ -6,7 +6,7 @@
         <th>Exercise ID</th>
         <th>Date Start</th>
         <th>Date End</th>
-        <th>Duration</th>
+        <th>Duration(Hrs)</th>
         <th>Comments</th>
     </tr>
     </thead>
@@ -15,8 +15,8 @@
     {
         <tr class="exercise-row">
             <td>@exercise.Id</td>
-            <td>@exercise.DateStart</td>
-            <td>@exercise.DateEnd</td>
+            <td>@exercise.DateStart.ToString("yyyy-MM-dd")</td>
+            <td>@exercise.DateEnd.ToString("yyyy-MM-dd")</td>
             <td>@exercise.Duration</td>
             <td>@exercise.Comments</td>
             <td>
