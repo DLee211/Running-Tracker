@@ -24,7 +24,14 @@ public class ExerciseController(ExerciseService exerciseService) : Controller
         return View(exercise);
     }
     
-
+    [HttpGet]
+    [Route("Edit/{id}")]
+    public IActionResult Edit(int id)
+    {
+        var exercise = exerciseService.GetExerciseById(id);
+        return View(exercise);
+    }
+    
     [HttpPost]
     [Route("AddExercise")]
     public IActionResult AddExercise([FromForm]Exercise model)
@@ -38,17 +45,17 @@ public class ExerciseController(ExerciseService exerciseService) : Controller
         return View("Create", model);
     }
 
+    
     [HttpPost]
-    [Route("UpdateExercise/{id}")]
-    public IActionResult UpdateExercise(int id, Exercise updatedExercise)
+    [Route("UpdateExercise")]
+    public IActionResult UpdateExercise([FromForm]Exercise exercise)
     {  
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
         {
-            return BadRequest(ModelState);
+            exerciseService.UpdateExercise(exercise.Id, exercise);
+            return RedirectToAction("Index");
         }
-        
-        exerciseService.UpdateExercise(id, updatedExercise);
-        return RedirectToAction("Index");
+        return View("Edit", exercise);
     }
 
     [HttpPost]

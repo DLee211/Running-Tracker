@@ -20,7 +20,7 @@
             <td>@exercise.Duration</td>
             <td>@exercise.Comments</td>
             <td>
-                <a asp-action="UpdateExercise" asp-route-id="@exercise.Id" class="btn btn-default">Edit</a>
+                <a href="@Url.Action("Edit", "Exercise", new { id = exercise.Id })">Edit</a>
             </td>
             <td>
                 <form asp-action="DeleteExercise" asp-route-id="@exercise.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this exercise?');">

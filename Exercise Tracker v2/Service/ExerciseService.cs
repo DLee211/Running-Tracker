@@ -28,7 +28,7 @@ public class ExerciseService
         existingExercise.Duration = updatedExercise.Duration;
         existingExercise.Comments = updatedExercise.Comments;
 
-        _exerciseRepository.Add(existingExercise);
+        _exerciseRepository.Update(existingExercise);
     }
     
     public void DeleteExercise(int id)

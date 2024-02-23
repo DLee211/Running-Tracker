@@ -34,6 +34,12 @@ public class ExerciseRepository<T> : IExerciseRepository<T> where T : class
         _context.SaveChanges();
     }
 
+    public void Update(T entity)
+    {
+        _dbSet.Update(entity);
+        _context.SaveChanges();
+    }
+
     public void Delete(T entity)
     {
         _dbSet.Remove(entity);
