@@ -1,8 +1,8 @@
-# Exercise Tracker Application
+# Running Tracker Application
 
 ## Introduction
 
-Welcome to the Exercise Tracker application! This project aims to provide a simple example of utilizing the Repository Pattern for data persistence in software development, particularly focusing on building a C# application. The Repository Pattern serves as a bridge between the business logic of the application and the data access layer, promoting loose coupling, testability, and maintainability.
+Welcome to the Running Tracker application! This project aims to provide a simple example of utilizing the Repository Pattern for data persistence in software development, particularly focusing on building a C# application. The Repository Pattern serves as a bridge between the business logic of the application and the data access layer, promoting loose coupling, testability, and maintainability.
 
 ## Requirements
 
